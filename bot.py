@@ -34,7 +34,7 @@ async def on_message(message):
             elements_found = ', '.join(elements[1])
             await message.channel.send(f'Your message can be constructed from the following elements: {elements_found}')
             elements_found = find_elements(elements[1])
-            await message.channel.send(f' {elements_found}')
+            await message.channel.send(', '.join(elements_found))
 
     
     await bot.process_commands(message)  # Process other commands
