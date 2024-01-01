@@ -1,3 +1,5 @@
+from string import punctuation
+
 elements_lookup = {
     'H': 'Hydrogen',
     'He': 'Helium',
@@ -133,6 +135,7 @@ elements = [
 
 def can_construct_from_elements(string):
     string = string.replace(' ', '')
+    string = string.translate(str.maketrans('', '', punctuation))
     if string == '':
         return False
     string = string.lower()
@@ -154,3 +157,4 @@ def find_elements(list_of_elements):
             elements_found.append(elements_lookup[element])
     return elements_found
 
+print(can_construct_from_elements('Hi!'))
