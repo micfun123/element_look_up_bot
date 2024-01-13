@@ -157,4 +157,3 @@ def find_elements(list_of_elements):
             elements_found.append(elements_lookup[element])
     return elements_found
 
-print(can_construct_from_elements('Hi!'))
